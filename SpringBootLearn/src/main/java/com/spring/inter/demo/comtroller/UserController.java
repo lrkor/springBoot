@@ -3,7 +3,7 @@ package com.spring.inter.demo.comtroller;
 import com.spring.inter.demo.bean.User;
 import com.spring.inter.demo.rusult.ResultModel;
 import com.spring.inter.demo.rusult.ResultModelTool;
-import com.spring.inter.demo.service.IUserService;
+import com.spring.inter.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,10 +17,10 @@ import java.util.Map;
  * @date 2019/9/11 13:42
  **/
 @RestController
-@RequestMapping(value = "/users")
+@RequestMapping(value = "/user")
 public class UserController {
     @Autowired
-    IUserService userService;
+    UserService userService;
 
     @PostMapping(value = "/query")
     public ResultModel query(){
@@ -36,8 +36,8 @@ public class UserController {
     }
 
     @PostMapping(value = "/add")
-    public ResultModel add(@RequestParam String name){
-        User User = new User(name);
+    public ResultModel add(@RequestParam(value = "name",required =false) String name,@RequestParam String userName,@RequestParam String password,@RequestParam String identity){
+        User User = new User(name,userName,password,identity);
         int errorCode = userService.add(User);
         ResultModel resultModel = new ResultModel();
         resultModel.setCode(errorCode);

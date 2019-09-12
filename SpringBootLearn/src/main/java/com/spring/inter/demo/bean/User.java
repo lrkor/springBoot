@@ -25,14 +25,20 @@ public class User {
     @Column(name="password")
     private String password;
 
+    @Column(name="identity")
+    private String identity;
+
     public User(){}
 
     public User(long id){
         this.id = id;
     }
 
-    public User(String name){
+    public User(String name,String userName,String password,String identity){
         this.name = name;
+        this.userName = userName;
+        this.password = password;
+        this.identity = identity;
     }
 
     public User(long id,String name){
@@ -70,5 +76,13 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getIdentity() {
+        return identity;
+    }
+
+    public void setIdentity(String identity) {
+        this.identity = identity;
     }
 }

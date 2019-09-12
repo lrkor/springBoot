@@ -9,7 +9,7 @@ import java.util.List;
  * @Description
  * @date 2019/9/11 11:42
  **/
-public interface IUserService {
+public interface UserService {
     //获取所有的用户
     List<User> query();
     //增

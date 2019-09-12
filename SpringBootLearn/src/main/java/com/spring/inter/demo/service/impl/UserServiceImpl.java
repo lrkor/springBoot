@@ -3,7 +3,7 @@ package com.spring.inter.demo.service.impl;
 import com.spring.inter.demo.bean.User;
 import com.spring.inter.demo.repository.JpaUserRepository;
 import com.spring.inter.demo.rusult.ErrorCode;
-import com.spring.inter.demo.service.IUserService;
+import com.spring.inter.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +17,7 @@ import java.util.List;
 
 
 @Service
-public class UserServiceImpl implements IUserService {
+public class UserServiceImpl implements UserService {
 
     @Autowired
     JpaUserRepository jpaUserRepository;
