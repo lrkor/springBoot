@@ -1,7 +1,6 @@
 package com.spring.inter.demo.comtroller;
 
 import com.spring.inter.demo.bean.Goods;
-import com.spring.inter.demo.bean.User;
 import com.spring.inter.demo.rusult.ResultModel;
 import com.spring.inter.demo.rusult.ResultModelTool;
 import com.spring.inter.demo.service.GoodsService;

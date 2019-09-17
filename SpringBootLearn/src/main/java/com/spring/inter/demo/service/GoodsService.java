@@ -14,11 +14,11 @@ public interface GoodsService {
     //获取所有的用户
     List<Goods> query();
     //增
-    int add(Goods user);
+    int add(Goods goods);
     //删
     int  delete(long id);
     //改
-    int update(Goods User);
+    int update(Goods goods);
     //查
     Goods get(long id);
 }
