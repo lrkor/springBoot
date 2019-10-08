@@ -1,7 +1,6 @@
 package com.spring.inter.demo.service;
 
 import com.spring.inter.demo.bean.Goods;
-import com.spring.inter.demo.bean.User;
 
 import java.util.List;
 
@@ -16,7 +15,7 @@ public interface GoodsService {
     //增
     int add(Goods goods);
     //删
-    int  delete(long id);
+    int delete(long id);
     //改
     int update(Goods goods);
     //查
